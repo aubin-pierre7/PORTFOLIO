@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — EMIAPROC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/Logo2.jpg" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">EMIAPROC</div>
+      <ul class="nav-menu">
+        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="#apropos" class="nav-link">À propos</a></li>
+        <li><a href="#competences" class="nav-link">Compétences</a></li>
+        <li><a href="#projets" class="nav-link">Projets</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Salut, moi c’est <span class="highlight">EMIAPROC</span></h1>
+      <p class="hero-subtitle">Développeur Full-Stack & passionné de robotique.</p>
+      <div class="hero-buttons">
+        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-secondary">Me contacter</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="assets/hero-placeholder.jpg" alt="Illustration du développeur" />
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="apropos" class="about">
+    <div class="container">
+      <h2 class="section-title">À propos de moi</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Je suis un passionné de technologie, de robotique et de développement logiciel. 
+            J’aime transformer des idées innovantes en projets concrets à travers des solutions digitales performantes.
+          </p>
+          <p>
+            Mon objectif : concevoir des produits élégants, robustes et utiles — que ce soit pour le web, le mobile ou les objets connectés.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <h3 class="stat-number">5+</h3>
+            <p class="stat-label">Années d’expérience</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">30+</h3>
+            <p class="stat-label">Projets livrés</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">20+</h3>
+            <p class="stat-label">Clients satisfaits</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="competences" class="skills">
+    <div class="container">
+      <h2 class="section-title">Mes compétences</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="assets/skill-frontend.png" alt="Front-end" />
+          <h3 class="skill-title">Développement Front-end</h3>
+          <p class="skill-description">HTML, CSS, JavaScript, React</p>
+        </div>
+        <div class="skill-card">
+          <img src="assets/skill-backend.png" alt="Back-end" />
+          <h3 class="skill-title">Développement Back-end</h3>
+          <p class="skill-description">Node.js, Python, PostgreSQL</p>
+        </div>
+        <div class="skill-card">
+          <img src="assets/skill-ux.png" alt="UI/UX" />
+          <h3 class="skill-title">UI/UX Design</h3>
+          <p class="skill-description">Figma, Adobe XD, Prototypage</p>
+        </div>
+        <div class="skill-card">
+          <img src="assets/skill-devops.png" alt="DevOps" />
+          <h3 class="skill-title">DevOps & Cloud</h3>
+          <p class="skill-description">Docker, AWS, CI/CD</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projets" class="projects">
+    <div class="container">
+      <h2 class="section-title">Projets récents</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/project1.jpg" alt="Projet 1" />
+            <div class="project-overlay">
+              <a href="#" class="project-link">Voir le projet</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Portfolio interactif</h3>
+            <p class="project-description">
+              Un site personnel moderne avec animations, transitions et responsive design.
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/project2.jpg" alt="Projet 2" />
+            <div class="project-overlay">
+              <a href="#" class="project-link">Voir le projet</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Application IoT</h3>
+            <p class="project-description">
+              Contrôle et visualisation de capteurs à distance via une plateforme web.
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/project3.jpg" alt="Projet 3" />
+            <div class="project-overlay">
+              <a href="#" class="project-link">Voir le projet</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Drone de surveillance</h3>
+            <p class="project-description">
+              Conception et programmation d’un drone autonome pour la cartographie et la sécurité.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Me contacter</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Discutons ensemble</h3>
+          <p>
+            Vous avez un projet ou une collaboration en tête ? Laissez-moi un message,
+            et je reviendrai vers vous rapidement.
+          </p>
+          <div class="contact-details">
+            <p><strong>Email :</strong> contact@emiaproc.com</p>
+            <p><strong>Téléphone :</strong> +33 6 12 34 56 78</p>
+            <p><strong>Localisation :</strong> Paris, France</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h3>Envoyez-moi un message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" class="form-input" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse e-mail</label>
+              <input type="email" id="email" class="form-input" placeholder="exemple@gmail.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Numéro de téléphone</label>
+              <input type="tel" id="phone" class="form-input" placeholder="+33 6 12 34 56 78" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Objet</label>
+              <input type="text" id="subject" class="form-input" placeholder="Objet du message" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" class="form-input" rows="5" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EMIAPROC — Tous droits réservés.</p>
+      <div class="social-links">
+        <a href="#" class="social-link"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
+        <a href="#" class="social-link"><img src="assets/github.png" alt="GitHub" /></a>
+        <a href="#" class="social-link"><img src="assets/twitter.png" alt="Twitter" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script"></script>
+</body>
+</html>
