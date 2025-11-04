@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // === NAVBAR MOBILE ===
+    // === MENU MOBILE ===
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // === NAVBAR SCROLL EFFECT ===
+    // === EFFET DE DÉFILEMENT SUR LA NAVBAR ===
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === ANIMATIONS AU SCROLL ===
+    // === ANIMATIONS AU DÉFILEMENT ===
     const observerOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -100px 0px'
     };
 
     const animatedElements = document.querySelectorAll(
-        '.hero-content, .about-content, .skill-card, .project-card, .contact-form, .stat-item'
+        '.hero-content, .about-content, .skill-card, .project-card, .contact-form, .stat-number'
     );
 
     const fadeUpObserver = new IntersectionObserver((entries) => {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, i * 100); // effet progressif
+                }, i * 100);
                 fadeUpObserver.unobserve(entry.target);
             }
         });
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     statNumbers.forEach(stat => statsObserver.observe(stat));
 
-    // === SCROLL FLUIDE ===
+    // === DÉFILEMENT FLUIDE ===
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = document.getElementById('message').value.trim();
 
         if (name && email && message) {
-            // mini animation de confirmation
             contactForm.classList.add('form-sent');
             setTimeout(() => {
                 alert(`✅ Merci ${name} ! Votre message a bien été envoyé.`);
