@@ -419,3 +419,21 @@ body {
 .btn-langue:hover {
     transform: scale(1.05);
 }
+
+
+/* --- NAVBAR CONTROLS (HAMBURGER + LANG) --- */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive: aligner le bouton langue sous le menu sur mobile si nécessaire */
+@media(max-width:768px) {
+    .nav-controls {
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}

@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // === MENU MOBILE ===
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const hamburger = document.querySelector('.menu-hamburger');
+    const navMenu = document.querySelector('.menu-nav');
+    const navLinks = document.querySelectorAll('.lien-nav');
     const contactForm = document.getElementById('contactForm');
 
     hamburger.addEventListener('click', () => {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === EFFET DE DÉFILEMENT SUR LA NAVBAR ===
-    const navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('.barre-nav');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const animatedElements = document.querySelectorAll(
-        '.hero-content, .about-content, .skill-card, .project-card, .contact-form, .stat-number'
+        '.contenu-accueil, .texte-a-propos, .carte-competence, .carte-projet, .formulaire-contact, .nombre-stat'
     );
 
     const fadeUpObserver = new IntersectionObserver((entries) => {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === COMPTEURS ANIMÉS ===
-    const statNumbers = document.querySelectorAll('.stat-number');
+    const statNumbers = document.querySelectorAll('.nombre-stat');
 
     function animateCounter(element) {
         const targetText = element.textContent.replace(/\D/g, '');
@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const duration = 2000;
         const increment = target / (duration / 16);
 
-        // effet pulse avant le comptage
         element.classList.add('pulse');
         setTimeout(() => {
             element.classList.remove('pulse');
@@ -129,9 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // === BOUTON EN/FR OPTIMISÉ ===
 const toggleLangBtn = document.getElementById('toggleLang');
-let currentLang = 'fr'; // langue actuelle
+let currentLang = 'fr';
 
-// Mapping français -> anglais
 const translations = [
     // NAVBAR
     { selector: 'a[href="#accueil"]', fr: 'Accueil', en: 'Home' },
@@ -141,7 +139,7 @@ const translations = [
     { selector: 'a[href="#contact"]', fr: 'Contact', en: 'Contact' },
 
     // HERO
-    { selector: '.titre-accueil', fr: 'Salut, moi c’est ', en: 'Hi, I am ' }, // texte avant le span
+    { selector: '.titre-accueil', fr: 'Salut, moi c’est ', en: 'Hi, I am ' },
     { selector: '.sous-titre-accueil', fr: 'Passion pour la tech, le gaming et la gestion des réseaux sociaux.', en: 'Passionate about tech, gaming, and social media management.' },
     { selector: '.bouton-principal[href="#projets"]', fr: 'En savoirs plus', en: 'Learn More' },
     { selector: '.bouton-secondaire[href="#contact"]', fr: 'Me contacter', en: 'Contact Me' },
@@ -197,7 +195,6 @@ function changeLanguage(lang) {
             const titreAccueil = document.querySelector('.titre-accueil');
             const spanNom = titreAccueil.querySelector('.surligne');
             if (titreAccueil && spanNom) {
-                // ne changer que le texte avant le span
                 titreAccueil.firstChild.textContent = lang === 'fr' ? item.fr : item.en;
             }
         } else {
