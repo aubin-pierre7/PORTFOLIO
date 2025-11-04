@@ -437,3 +437,11 @@ body {
         margin-top: 0.5rem;
     }
 }
+
+.separator {
+    height: 1px;          /* épaisseur du trait */
+    background: #444;     /* couleur du trait */
+    margin: 1.5rem 0;     /* espace vertical */
+    width: 100%;
+    border-radius: 2px;   /* coins légèrement arrondis */
+}
