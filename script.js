@@ -127,74 +127,97 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-// === BOUTON EN/FR ===
+// === BOUTON EN/FR OPTIMISÉ ===
 const toggleLangBtn = document.getElementById('toggleLang');
 let currentLang = 'fr'; // langue actuelle
 
-// Texte français -> anglais
-const translations = {
-    'Accueil': 'Home',
-    'À propos': 'About',
-    'Compétences': 'Skills',
-    'Projets': 'Projects',
-    'Contact': 'Contact',
-    'Salut, moi c’est ': 'Hi, I am ',
-    'Passion pour la tech, le gaming et la gestion des réseaux sociaux.': 'Passionate about tech, gaming, and social media management.',
-    'En savoirs plus': 'Learn More',
-    'Me contacter': 'Contact Me',
-    'À propos de moi': 'About Me',
-    'Je suis passionné par la technologie, la robotique et le développement logiciel. Je m’intéresse également aux jeux vidéo et à la gestion des réseaux sociaux, pour créer des expériences interactives et connectées.':
-        'I am passionate about technology, robotics, and software development. I am also interested in video games and social media management, creating interactive and connected experiences.',
-    'Mon objectif :': 'My Goal:',
-    'Concevoir des solutions élégantes, robustes et fonctionnelles - que ce soit pour le web, les applications mobiles, les projets robotiques et objets connectés, tout en gérant efficacement la communication sur les réseaux sociaux.':
-        'Design elegant, robust, and functional solutions – for the web, mobile apps, robotics and IoT projects, while managing social media effectively.',
-    'Années d’expérience': 'Years of Experience',
-    'Projets livrés': 'Projects Delivered',
-    'Clients satisfaits': 'Happy Clients',
-    'Mes compétences': 'My Skills',
-    'Développement Front-end': 'Front-end Development',
-    'Développement Back-end': 'Back-end Development',
-    'Conception d’applications de contrôle, création de chatbots et réalisation de robots.': 'Control app design, chatbot creation and robotics projects.',
-    'Cloud et IA': 'Cloud & AI',
-    'Gestion des Réseaux Sociaux': 'Social Media Management',
-    'Projets récents': 'Recent Projects',
-    "Site Vitrine d'EMIAPROC - IUT de DOUALA": 'EMIAPROC Showcase Website - IUT of DOUALA',
-    'Un site personnel moderne avec animations, transitions et responsive design pour le club robotique de l\'IUT de DOUALA.':
-        'A modern personal website with animations, transitions, and responsive design for the IUT of DOUALA robotics club.',
-    'Application IoT': 'IoT Application',
-    'Contrôle et visualisation de capteurs à distance via une plateforme web.': 'Remote sensor control and visualization via a web platform.',
-    'Site e-commerce - Ebooks': 'E-commerce Site - Ebooks',
-    'Site de vente en ligne avec gestion des produits, panier et paiement sécurisé.': 'Online store with product management, shopping cart, and secure payment.',
-    'Me contacter': 'Contact Me',
-    'Discutons ensemble': 'Let’s Talk',
-    'Vous avez un projet ou une collaboration en tête ? Laissez-moi un message, et je reviendrai vers vous rapidement.':
-        'Do you have a project or collaboration in mind? Leave me a message, and I will get back to you soon.',
-    'Envoyez-moi un message': 'Send Me a Message',
-    'Nom complet': 'Full Name',
-    'Adresse e-mail': 'Email Address',
-    'Message': 'Message',
-    'Votre nom': 'Your Name',
-    'Votre email': 'Your Email',
-    'Votre message...': 'Your Message...',
-    'Envoyer le message': 'Send Message',
-    'Code avec passion et determination.': 'Coding with passion and determination.'
-};
+// Mapping français -> anglais
+const translations = [
+    // NAVBAR
+    { selector: 'a[href="#accueil"]', fr: 'Accueil', en: 'Home' },
+    { selector: 'a[href="#apropos"]', fr: 'À propos', en: 'About' },
+    { selector: 'a[href="#competences"]', fr: 'Compétences', en: 'Skills' },
+    { selector: 'a[href="#projets"]', fr: 'Projets', en: 'Projects' },
+    { selector: 'a[href="#contact"]', fr: 'Contact', en: 'Contact' },
 
+    // HERO
+    { selector: '.titre-accueil', fr: 'Salut, moi c’est ', en: 'Hi, I am ' }, // texte avant le span
+    { selector: '.sous-titre-accueil', fr: 'Passion pour la tech, le gaming et la gestion des réseaux sociaux.', en: 'Passionate about tech, gaming, and social media management.' },
+    { selector: '.bouton-principal[href="#projets"]', fr: 'En savoirs plus', en: 'Learn More' },
+    { selector: '.bouton-secondaire[href="#contact"]', fr: 'Me contacter', en: 'Contact Me' },
+
+    // À PROPOS
+    { selector: '#apropos .section-title', fr: 'À propos de moi', en: 'About Me' },
+    { selector: '.texte-a-propos p:first-of-type', fr: "Je suis passionné par la technologie, la robotique et le développement logiciel.\nJ’aime transformer des idées innovantes en projets concrets, tels que la construction de robots, la création de Chatbots et le développement d’applications, tout en combinant créativité et expertise digitale.\nJe m’intéresse également aux jeux vidéo et à la gestion des réseaux sociaux, pour créer des expériences interactives et connectées.", en: "I am passionate about technology, robotics, and software development. I enjoy transforming innovative ideas into real projects, such as building robots, creating chatbots, and developing applications, combining creativity and digital expertise. I am also interested in video games and social media management to create interactive and connected experiences." },
+    { selector: '.texte-a-propos p b', fr: 'Mon objectif :', en: 'My Goal:' },
+    { selector: '.texte-a-propos p:last-of-type', fr: 'Concevoir des solutions élégantes, robustes et fonctionnelles - que ce soit pour le web, les applications mobiles, les projets robotiques et objets connectés, tout en gérant efficacement la communication sur les réseaux sociaux.', en: 'Design elegant, robust, and functional solutions – for the web, mobile apps, robotics, and IoT projects, while managing social media effectively.' },
+
+    { selector: '.etiquette-stat:nth-of-type(1)', fr: 'Années d’expérience', en: 'Years of Experience' },
+    { selector: '.etiquette-stat:nth-of-type(2)', fr: 'Projets livrés', en: 'Projects Delivered' },
+    { selector: '.etiquette-stat:nth-of-type(3)', fr: 'Clients satisfaits', en: 'Happy Clients' },
+
+    // COMPÉTENCES
+    { selector: '#competences .section-title', fr: 'Mes compétences', en: 'My Skills' },
+    { selector: '.carte-competence:nth-of-type(1) .titre-competence', fr: 'Développement Front-end', en: 'Front-end Development' },
+    { selector: '.carte-competence:nth-of-type(2) .titre-competence', fr: 'Développement Back-end', en: 'Back-end Development' },
+    { selector: '.carte-competence:nth-of-type(3) .titre-competence', fr: 'Conception d’applications de contrôle, création de chatbots et réalisation de robots.', en: 'Control app design, chatbot creation, and robotics projects.' },
+    { selector: '.carte-competence:nth-of-type(4) .titre-competence', fr: 'Cloud et IA', en: 'Cloud & AI' },
+    { selector: '.carte-competence:nth-of-type(5) .titre-competence', fr: 'Gestion des Réseaux Sociaux', en: 'Social Media Management' },
+
+    // PROJETS
+    { selector: '#projets .section-title', fr: 'Projets récents', en: 'Recent Projects' },
+    { selector: '.carte-projet:nth-of-type(1) .project-title', fr: "Site Vitrine d'EMIAPROC - IUT de DOUALA", en: 'EMIAPROC Showcase Website - IUT of DOUALA' },
+    { selector: '.carte-projet:nth-of-type(1) .project-description', fr: "Un site personnel moderne avec animations, transitions et responsive design pour le club robotique de l'IUT de DOUALA.", en: 'A modern personal website with animations, transitions, and responsive design for the IUT of DOUALA robotics club.' },
+    { selector: '.carte-projet:nth-of-type(2) .project-title', fr: 'Application IoT', en: 'IoT Application' },
+    { selector: '.carte-projet:nth-of-type(2) .project-description', fr: 'Contrôle et visualisation de capteurs à distance via une plateforme web.', en: 'Remote sensor control and visualization via a web platform.' },
+    { selector: '.carte-projet:nth-of-type(3) .project-title', fr: 'Site e-commerce - Ebooks', en: 'E-commerce Site - Ebooks' },
+    { selector: '.carte-projet:nth-of-type(3) .project-description', fr: 'Site de vente en ligne avec gestion des produits, panier et paiement sécurisé.', en: 'Online store with product management, shopping cart, and secure payment.' },
+
+    // CONTACT
+    { selector: '#contact .section-title', fr: 'Me contacter', en: 'Contact Me' },
+    { selector: '.info-contact h3', fr: 'Discutons ensemble', en: 'Let’s Talk' },
+    { selector: '.info-contact p:first-of-type', fr: 'Vous avez un projet ou une collaboration en tête ? Laissez-moi un message,\net je reviendrai vers vous rapidement.', en: 'Do you have a project or collaboration in mind? Leave me a message and I will get back to you soon.' },
+    { selector: '.formulaire-contact h3', fr: 'Envoyez-moi un message', en: 'Send Me a Message' },
+    { selector: 'label[for="name"]', fr: 'Nom complet', en: 'Full Name' },
+    { selector: 'label[for="email"]', fr: 'Adresse e-mail', en: 'Email Address' },
+    { selector: 'label[for="message"]', fr: 'Message', en: 'Message' },
+    { selector: '#name', fr: 'Votre nom', en: 'Your Name' },
+    { selector: '#email', fr: 'Votre email', en: 'Your Email' },
+    { selector: '#message', fr: 'Votre message...', en: 'Your Message...' },
+    { selector: '.btn-full', fr: 'Envoyer le message', en: 'Send Message' },
+
+    // FOOTER
+    { selector: '.pied-page p', fr: 'Code avec passion et determination.', en: 'Coding with passion and determination.' }
+];
+
+// Fonction pour changer la langue
+function changeLanguage(lang) {
+    translations.forEach(item => {
+        if (item.selector === '.titre-accueil') {
+            const titreAccueil = document.querySelector('.titre-accueil');
+            const spanNom = titreAccueil.querySelector('.surligne');
+            if (titreAccueil && spanNom) {
+                // ne changer que le texte avant le span
+                titreAccueil.firstChild.textContent = lang === 'fr' ? item.fr : item.en;
+            }
+        } else {
+            const el = document.querySelector(item.selector);
+            if (el) {
+                el.textContent = lang === 'fr' ? item.fr : item.en;
+            }
+        }
+    });
+}
+
+// Événement du bouton
 toggleLangBtn.addEventListener('click', () => {
     if (currentLang === 'fr') {
-        // passer à l’anglais
         currentLang = 'en';
         toggleLangBtn.textContent = 'FR';
-        Object.keys(translations).forEach(frenchText => {
-            document.body.innerHTML = document.body.innerHTML.replace(frenchText, translations[frenchText]);
-        });
+        changeLanguage('en');
     } else {
-        // retourner au français
         currentLang = 'fr';
         toggleLangBtn.textContent = 'EN';
-        Object.keys(translations).forEach(frenchText => {
-            document.body.innerHTML = document.body.innerHTML.replace(translations[frenchText], frenchText);
-        });
+        changeLanguage('fr');
     }
 });
