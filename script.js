@@ -133,8 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { selector: '#projets .section-title', fr: 'Projets récents', en: 'Recent Projects' },
         { selector: '.carte-projet:nth-of-type(1) .project-title', fr: "Site Vitrine d'EMIAPROC - IUT de DOUALA", en: "Showcase Website of EMIAPROC - IUT of DOUALA" },
         { selector: '.carte-projet:nth-of-type(1) .project-description', fr: "Un site personnel moderne avec animations, transitions et responsive design pour le club robotique de l'IUT de DOUALA.", en: "A modern personal site and responsive design for the IUT of DOUALA Robotics Club." },
-        { selector: '.carte-projet:nth-of-type(2) .project-title', fr: "Application IoT", en: "IoT Application" },
-        { selector: '.carte-projet:nth-of-type(2) .project-description', fr: "Contrôle et visualisation de capteurs à distance via une plateforme web.", en: "Remote sensor control and visualization via a web platform." },
         { selector: '.carte-projet:nth-of-type(3) .project-title', fr: "Site e-commerce - Ebooks", en: "E-commerce Website - Ebooks" },
         { selector: '.carte-projet:nth-of-type(3) .project-description', fr: "Site de vente en ligne avec gestion des produits, panier et paiement sécurisé.", en: "Online store with product management, cart, and secure payment." },
 
