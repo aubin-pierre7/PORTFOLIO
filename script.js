@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ACCUEIL
         { selector: '.titre-accueil', fr: 'Salut, moi c’est ', en: 'Hi, I am ' },
-        { selector: '.sous-titre-accueil', fr: 'Passion pour la tech, le gaming et la gestion des réseaux sociaux.', en: 'Passionate about tech, gaming, and social media management.' },
+        { selector: '.sous-titre-accueil', fr: 'Passion pour la tech, le gaming et la gestion des réseaux sociaux.', en: 'Passionate about tech, gaming and social media management.' },
         { selector: '.bouton-principal[href="#projets"]', fr: 'En savoirs plus', en: 'Learn More' },
         { selector: '.bouton-secondaire[href="#contact"]', fr: 'Me contacter', en: 'Contact Me' },
 
