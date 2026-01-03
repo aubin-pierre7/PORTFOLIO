@@ -77,22 +77,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- FORMULAIRE CONTACT ---
-    contactForm.addEventListener('submit', e => {
-        e.preventDefault();
-        const name = contactForm.name.value.trim();
-        const email = contactForm.email.value.trim();
-        const message = contactForm.message.value.trim();
+// --- FORMULAIRE CONTACT WHATSAPP ---
+const contactForm = document.getElementById('contactForm');
 
-        if (!name || !email || !message) return alert('⚠️ Veuillez remplir tous les champs requis.');
+contactForm.addEventListener('submit', e => {
+    e.preventDefault();
 
-        contactForm.classList.add('form-sent');
-        setTimeout(() => {
-            alert(`✅ Merci ${name} ! Votre message a bien été envoyé.`);
-            contactForm.reset();
-            contactForm.classList.remove('form-sent');
-        }, 800);
-    });
+    const name = contactForm.name.value.trim();
+    const phone = contactForm.phone.value.trim();
+    const message = contactForm.message.value.trim();
+
+    if (!name || !phone || !message) {
+        return alert('⚠️ Veuillez remplir tous les champs requis.');
+    }
+
+    const whatsappNumber = "+237696865577"; // ex: 33612345678
+
+    const whatsappMessage = `
+Nom: ${name}
+Téléphone: ${phone}
+Message: ${message}
+    `.trim();
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    contactForm.classList.add('form-sent');
+
+    setTimeout(() => {
+        window.open(whatsappURL, '_blank');
+        contactForm.reset();
+        contactForm.classList.remove('form-sent');
+    }, 500);
+});
+
 
     // --- LANGUE EN/FR ---
     let currentLang = 'fr';

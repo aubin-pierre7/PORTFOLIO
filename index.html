@@ -1,220 +1,287 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Aubin</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Moi.jpg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Aubin</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/Moi.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="barre-nav">
+      <div class="logo">PIERRE-STYLE AUBIN MABOM</div>
 
-  <!-- NAVBAR -->
-  <nav class="barre-nav">
-    <div class="logo">PIERRE-STYLE AUBIN MABOM</div>
+      <ul class="menu-nav">
+        <li><a href="#accueil" class="lien-nav">Accueil</a></li>
+        <li><a href="#apropos" class="lien-nav">À propos</a></li>
+        <li><a href="#competences" class="lien-nav">Compétences</a></li>
+        <li><a href="#projets" class="lien-nav">Projets</a></li>
+        <li><a href="#contact" class="lien-nav">Contact</a></li>
+      </ul>
 
-    <ul class="menu-nav">
-      <li><a href="#accueil" class="lien-nav">Accueil</a></li>
-      <li><a href="#apropos" class="lien-nav">À propos</a></li>
-      <li><a href="#competences" class="lien-nav">Compétences</a></li>
-      <li><a href="#projets" class="lien-nav">Projets</a></li>
-      <li><a href="#contact" class="lien-nav">Contact</a></li>
-    </ul>
+      <!-- BOUTON LANGUE -->
+      <button id="toggleLang" class="btn-langue">EN</button>
 
-    <!-- BOUTON LANGUE -->
-    <button id="toggleLang" class="btn-langue">EN</button>
+      <!-- HAMBURGER pour mobile -->
+      <div class="menu-hamburger"><span></span><span></span><span></span></div>
+    </nav>
 
-    <!-- HAMBURGER pour mobile -->
-    <div class="menu-hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="accueil" class="accueil">
-    <div class="contenu-accueil">
-      <h1 class="titre-accueil">Salut, moi c’est <span class="surligne">Aubin</span></h1>
-      <p class="sous-titre-accueil">Passion pour la tech, le gaming et la gestion des réseaux sociaux.</p>
-      <div class="boutons-accueil">
-        <a href="#projets" class="bouton bouton-principal">En savoirs plus</a>
-        <a href="#contact" class="bouton bouton-secondaire">Me contacter</a>
-      </div>
-    </div>
-    <div class="media-accueil">
-      <img src="assets/Moi.jpg" alt="Une photo de moi" />
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="apropos" class="a-propos">
-    <div class="container">
-      <h2 class="section-title">À propos de moi</h2>
-      <div class="contenu-a-propos">
-        <div class="texte-a-propos">
-          <p>
-            Je suis passionné par la technologie, la robotique et le développement logiciel.
-            J’aime transformer des idées innovantes en projets concrets, tels que la construction de robots, la création de Chatbots et le développement d’applications, tout en combinant créativité et expertise digitale.
-            Je m’intéresse également aux jeux vidéo et à la gestion des réseaux sociaux, pour créer des expériences interactives et connectées.
-          </p>
-          <div class="separator"></div>
-          <p>
-            <b>Mon objectif :</b> Concevoir des solutions élégantes, robustes et fonctionnelles - que ce soit pour le web, les applications mobiles, les projets robotiques et objets connectés, tout en gérant efficacement la communication sur les réseaux sociaux.
-          </p>
-        </div>
-        <div class="stats-a-propos">
-          <div class="stat-item">
-            <h3 class="nombre-stat">1+</h3>
-            <p class="etiquette-stat">Années d’expérience</p>
-          </div>
-          <div class="stat-item">
-            <h3 class="nombre-stat">5+</h3>
-            <p class="etiquette-stat">Projets livrés</p>
-          </div>
-          <div class="stat-item">
-            <h3 class="nombre-stat">5+</h3>
-            <p class="etiquette-stat">Clients satisfaits</p>
-          </div>
+    <!-- HERO -->
+    <section id="accueil" class="accueil">
+      <div class="contenu-accueil">
+        <h1 class="titre-accueil">
+          Salut, moi c’est <span class="surligne">Aubin</span>
+        </h1>
+        <p class="sous-titre-accueil">
+          Passion pour la tech, le gaming et la gestion des réseaux sociaux.
+        </p>
+        <div class="boutons-accueil">
+          <a href="#projets" class="bouton bouton-principal">En savoirs plus</a>
+          <a href="#contact" class="bouton bouton-secondaire">Me contacter</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="competences" class="competences">
-    <div class="container">
-      <h2 class="section-title">Mes compétences</h2>
-      <div class="grille-competences">
-        <div class="carte-competence">
-          <img src="assets/Front-end.jpg" alt="Front-end" />
-          <h3 class="titre-competence">Développement Front-end</h3>
-          <p class="description-competence">HTML, CSS, JavaScript, React, Bootstrap, Tailwind.</p>
-        </div>
-        <div class="carte-competence">
-          <img src="assets/Back-end.jpg" alt="Back-end" />
-          <h3 class="titre-competence">Développement Back-end</h3>
-          <p class="description-competence">Node.js, Python, C, SQL, Firebase.</p>
-        </div>
-        <div class="carte-competence">
-          <img src="assets/Robotique.jpg" alt="UI/UX" />
-          <h3 class="titre-competence">Conception d’applications de contrôle, création de chatbots et réalisation de robots.</h3>
-          <p class="description-competence">Mit App Inventor, Arduino, C++, Python.</p>
-        </div>
-        <div class="carte-competence">
-          <img src="assets/AWS.png" alt="DevOps" />
-          <h3 class="titre-competence">Cloud et IA </h3>
-          <p class="description-competence">Quelques services AWS, PartyRock.</p>
-        </div>
-        <div class="carte-competence">
-          <img src="assets/AWS.png" alt="DevOps" />
-          <h3 class="titre-competence">Gestion des Réseaux Sociaux </h3>
-          <p class="description-competence">Tiktok, Youtube, Facebook, Instagram, LinkedIn.</p>
-        </div>
+      <div class="media-accueil">
+        <img src="assets/Moi.jpg" alt="Une photo de moi" />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projets" class="projets">
-    <div class="container">
-      <h2 class="section-title">Projets récents</h2>
-      <div class="grille-projets">
-        <div class="carte-projet">
-          <div class="image-projet">
-            <img src="assets/EMIAPROC.png" alt="Projet 1" />
-            <div class="superposition-projet">
-              <a href="https://emiaproc.vercel.app/index.html" class="lien-projet"  rel="noopener noreferrer"  target="_blank">Voir le projet</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Site Vitrine d'EMIAPROC - IUT de DOUALA</h3>
+    <!-- ABOUT -->
+    <section id="apropos" class="a-propos">
+      <div class="container">
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="contenu-a-propos">
+          <div class="texte-a-propos">
+            <p>
+              Je suis passionné par la technologie, la robotique et le
+              développement logiciel. J’aime transformer des idées innovantes en
+              projets concrets, tels que la construction de robots, la création
+              de Chatbots et le développement d’applications, tout en combinant
+              créativité et expertise digitale. Je m’intéresse également aux
+              jeux vidéo et à la gestion des réseaux sociaux, pour créer des
+              expériences interactives et connectées.
+            </p>
             <div class="separator"></div>
-            <p class="project-description">
-              Un site personnel moderne et responsive design pour le club robotique de l'IUT de DOUALA.
+            <p>
+              <b>Mon objectif :</b> Concevoir des solutions élégantes, robustes
+              et fonctionnelles - que ce soit pour le web, les applications
+              mobiles, les projets robotiques et objets connectés, tout en
+              gérant efficacement la communication sur les réseaux sociaux.
             </p>
           </div>
-        </div>
-        <div class="carte-projet">
-          <div class="image-projet">
-            <img src="assets/AubinPack.png" alt="Projet 3" />
-            <div class="superposition-projet">
-              <a href="https://e-commerce-six-mauve-51.vercel.app/index.html" class="lien-projet"  target="_blank"  rel="noopener noreferrer">Voir le projet</a>
+          <div class="stats-a-propos">
+            <div class="stat-item">
+              <h3 class="nombre-stat">1+</h3>
+              <p class="etiquette-stat">Années d’expérience</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="nombre-stat">5+</h3>
+              <p class="etiquette-stat">Projets livrés</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="nombre-stat">5+</h3>
+              <p class="etiquette-stat">Clients satisfaits</p>
             </div>
           </div>
-          <div class="project-info">
-            <h3 class="project-title">Site e-commerce - Ebooks</h3>
-            <div class="separator"></div>
-            <p class="project-description">
-              Site de vente en ligne avec gestion des produits, panier et paiement sécurisé.
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="competences" class="competences">
+      <div class="container">
+        <h2 class="section-title">Mes compétences</h2>
+        <div class="grille-competences">
+          <div class="carte-competence">
+            <img src="assets/Front-end.jpg" alt="Front-end" />
+            <h3 class="titre-competence">Développement Front-end</h3>
+            <p class="description-competence">
+              HTML, CSS, JavaScript, React, Bootstrap, Tailwind.
+            </p>
+          </div>
+          <div class="carte-competence">
+            <img src="assets/Back-end.jpg" alt="Back-end" />
+            <h3 class="titre-competence">Développement Back-end</h3>
+            <p class="description-competence">
+              Node.js, Python, C, SQL, Firebase.
+            </p>
+          </div>
+          <div class="carte-competence">
+            <img src="assets/Robotique.jpg" alt="UI/UX" />
+            <h3 class="titre-competence">
+              Conception d’applications de contrôle, création de chatbots et
+              réalisation de robots.
+            </h3>
+            <p class="description-competence">
+              Mit App Inventor, Arduino, C++, Python.
+            </p>
+          </div>
+          <div class="carte-competence">
+            <img src="assets/AWS.png" alt="DevOps" />
+            <h3 class="titre-competence">Cloud et IA</h3>
+            <p class="description-competence">
+              Quelques services AWS, PartyRock.
+            </p>
+          </div>
+          <div class="carte-competence">
+            <img src="assets/AWS.png" alt="DevOps" />
+            <h3 class="titre-competence">Gestion des Réseaux Sociaux</h3>
+            <p class="description-competence">
+              Tiktok, Youtube, Facebook, Instagram, LinkedIn.
             </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contactez">
-    <div class="container">
-      <h2 class="section-title">Me contacter</h2>
-      <div class="contenu-contact">
-        <div class="info-contact">
-          <p>
-            Vous avez un projet ou une collaboration en tête ? Laissez-moi un message,
-            et je reviendrai vers vous rapidement.
-          </p>
-          <div class="details-contact">
-            <p><strong>Email :</strong> aubinp58@gmail.com</p>
-            <p><strong>Téléphone :</strong> +237 696865577</p>
-            <p><strong>Localisation :</strong> Douala, Cameroun</p>
-            <p><strong>Linkedin :</strong> Aubin Mabom Pierre Style</p>
+    <!-- PROJECTS -->
+    <section id="projets" class="projets">
+      <div class="container">
+        <h2 class="section-title">Projets récents</h2>
+        <div class="grille-projets">
+          <div class="carte-projet">
+            <div class="image-projet">
+              <img src="assets/EMIAPROC.png" alt="Projet 1" />
+              <div class="superposition-projet">
+                <a
+                  href="https://emiaproc.vercel.app/index.html"
+                  class="lien-projet"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Voir le projet</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">
+                Site Vitrine d'EMIAPROC - IUT de DOUALA
+              </h3>
+              <div class="separator"></div>
+              <p class="project-description">
+                Un site personnel moderne et responsive design pour le club
+                robotique de l'IUT de DOUALA.
+              </p>
+            </div>
+          </div>
+          <div class="carte-projet">
+            <div class="image-projet">
+              <img src="assets/AubinPack.png" alt="Projet 3" />
+              <div class="superposition-projet">
+                <a
+                  href="https://e-commerce-six-mauve-51.vercel.app/index.html"
+                  class="lien-projet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le projet</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Site e-commerce - Ebooks</h3>
+              <div class="separator"></div>
+              <p class="project-description">
+                Site de vente en ligne avec gestion des produits, panier et
+                paiement sécurisé.
+              </p>
+            </div>
           </div>
         </div>
-
-        <form class="formulaire-contact" id="contactForm">
-          <h3>Envoyez-moi un message</h3>
-          <div class="ligne-form">
-            <div class="groupe-form">
-              <label for="name">Nom complet</label>
-              <input type="text" id="name" class="input-form" placeholder="Votre nom" required />
-            </div>
-            <div class="groupe-form">
-              <label for="email">Adresse e-mail</label>
-              <input type="email" id="email" class="input-form" placeholder="Votre email" required />
-            </div>
-          </div>
-          <div class="groupe-form">
-            <label for="message">Message</label>
-            <textarea id="message" class="input-form" rows="5" placeholder="Votre message..." required></textarea>
-          </div>
-          <button type="submit" class="bouton bouton-principal btn-full">Envoyer le message</button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="pied-page">
-  <div class="container">
-    <p>&copy; 2025 Aubin Mabom - Code avec passion et détermination.</p>
+    <!-- CONTACT -->
+    <section id="contact" class="contactez">
+      <div class="container">
+        <h2 class="section-title">Me contacter</h2>
+        <div class="contenu-contact">
+          <div class="info-contact">
+            <p>
+              Vous avez un projet ou une collaboration en tête ? Laissez-moi un
+              message, et je reviendrai vers vous rapidement.
+            </p>
+            <div class="details-contact">
+              <p><strong>Email :</strong> aubinp58@gmail.com</p>
+              <p><strong>Téléphone :</strong> +237 696865577</p>
+              <p><strong>Localisation :</strong> Douala, Cameroun</p>
+              <p><strong>Linkedin :</strong> Aubin Mabom Pierre Style</p>
+            </div>
+          </div>
 
-    <div class="liens-sociaux">
-      <a href="https://www.linkedin.com/in/aubin-mabom-pierre-style-532664352" target="_blank" class="lien-sociaux">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
+          <form class="formulaire-contact" id="contactForm">
+            <h3>Envoyez-moi un message</h3>
+            <div class="ligne-form">
+              <div class="groupe-form">
+                <label for="name">Nom complet</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="input-form"
+                  placeholder="Votre nom"
+                  required
+                />
+              </div>
+              <div class="groupe-form">
+                <label for="phone">Numéro WhatsApp</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  class="input-form"
+                  placeholder="Votre numéro"
+                  required
+                />
+              </div>
+            </div>
+            <div class="groupe-form">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                class="input-form"
+                rows="5"
+                placeholder="Votre message..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="bouton bouton-principal btn-full">
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-      <a href="https://wa.me/237696865577" target="_blank" class="lien-sociaux">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
+    <!-- FOOTER -->
+    <footer class="pied-page">
+      <div class="container">
+        <p>&copy; 2025 Aubin Mabom - Code avec passion et détermination.</p>
 
-      <a href="mailto:aubinp58@gmail.com" class="lien-sociaux">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-    </div>
-  </div>
-</footer>
+        <div class="liens-sociaux">
+          <a
+            href="https://www.linkedin.com/in/aubin-mabom-pierre-style-532664352"
+            target="_blank"
+            class="lien-sociaux"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
 
+          <a
+            href="https://wa.me/237696865577"
+            target="_blank"
+            class="lien-sociaux"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
 
-  <script src="script.js"></script>
-</body>
+          <a href="mailto:aubinp58@gmail.com" class="lien-sociaux">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
